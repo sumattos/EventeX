@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset="utf-8"/>
+		<title>EventeX</title>
+
+		<style>
+			body{
+				font:sans-serif;
+				font-size:20px;
+				background:#8B658B;
+			}
+			footer{
+				font-size:12px;
+				position:absolute;
+    				bottom:0;
+				width:100%;
+			}
+		</style>
+	</head>
+<body>
+	<header align="top" style="background:#ADFF2F; align:top">
+		<img src="{{ STATIC_URL }}img/EventeX.png"	/>
+		<p>Cabeçalho</p>
+	</header>
+	<article>
+		<center><h1>Parabéns {{	subscription.name }}!</h1></center>
+		<p>
+			Sua inscrição foi realizada em
+			{{ subscription.created_at|date:"d/m/Y" }}.
+
+		</p>
+	</article>
+	<article>
+		<p>
+			Em breve, alguém entrará em contato pelo
+			{% if subscription.phone %}
+				telefone {{ subscription.phone }}.
+			{% else %}
+				e­‐mail {{ subscription.email }}.
+			{% endif %}
+		</p>
+	</article>
+	<footer style="">
+		<center><p>Copyright by Suzana</p></center>
+	</footer>
+</body>
+</html>
+

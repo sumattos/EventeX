@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <center>
+	<h2 style="font-family: sans-serif"> Formulário de Inscrição </h2>
+    		<form action="." method="POST">
+        
+	{% csrf_token %}
+
+	<table>
+	<tr>
+		<th> Nome: </th>
+		<th> {{form.name}}</th>
+	</tr>
+	<tr>
+		<th> Telefone: </th>
+		<th> {{form.phone}}</th>
+	</tr>
+	<tr>
+		<th> CPF: </th>
+		<th> {{form.cpf}}</th>
+	</tr>
+	<tr>
+		<th> E-mail: </th>
+		<th> {{form.email}}</th>
+	</tr>
+	
+	</table>
+
+        <input type="submit" value="Enviar" class="button">
+    </form>
+
+</center>
+
+{% endblock content %}

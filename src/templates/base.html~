@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset="utf-8"/>
+		<title>EventeX</title>
+
+		<style>
+			body{
+				font:sans-serif;
+				font-size:20px;
+				background:#FFFFFF;
+			}
+			
+			footer{
+				font-size:12px;
+				position:absolute;
+    				bottom:0;
+				width:100%;
+			}
+			nav{
+				position:absolute;
+				margin-left:10px;
+				top:150px;
+				
+			}
+			.link_limpo{
+				font-family:sans-serif;
+				text-decoration:none;
+				color:black;
+				
+			}
+			.link_limpo_visited{
+				font-family:sans-serif;
+				text-decoration:none;
+				color:black;
+				
+			}
+			.principal{
+				position:absolute;
+				width:700;
+				margin-left:50%;
+				left:-350px;
+				top:150px;			
+			}
+		</style>
+	</head>
+<body>
+	<br />
+	<header align="top" style="align:top">
+		<center><img src="{{ STATIC_URL }}img/EventeX.png"/></center>
+	</header>
+
+	<nav>
+		<a href="/" class="link_limpo"> Home </a><br />
+		<a href="/cadastro/" class="link_limpo"> Cadastro </a>
+	</nav>
+
+	
+	
+	<article class="principal">
+				{% block content %}
+				{% endblock content %}
+	</article>
+	<footer>
+		<center><p>Copyright by Suzana</p></center>
+	</footer>
+  </body>
+</html>
+

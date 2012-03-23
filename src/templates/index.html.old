@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset="utf-8"/>
+		<title>EventeX</title>
+
+		<style>
+			body{
+				font:sans-serif;
+				font-size:20px;
+				background:#E9967A;
+			}
+			footer{
+				font-size:12px;
+				position:absolute;
+    				bottom:0;
+				width:100%;
+			}
+		</style>
+	</head>
+<body>
+	<br />
+	<header align="top" style="align:top">
+		<center><img src="{{ STATIC_URL }}img/EventeX.png"/></center>
+	</header>
+
+	<ul>
+		 <li><a href="{% url subscriptions:subscribe %}">Fazer sua inscrição</a></li>
+	</ul>
+
+	<br />
+
+	<article>
+		<center><h2>Bem vindo ao EventeX!</h2></center>
+		<br />
+	
+		<p>
+			O evento mais sensacional do ano depois do Dev in Rio!
+		</p>
+		<p>
+			Você não pode perder esta oportunidade! 
+		</p>
+			Abertura das inscrições em:
+			{{ subscription.created_at }}.
+
+		</p>
+	</article>
+
+	<article>
+		<p>
+			<br />
+
+			Para dúvidas e informações, entre em contato pelo email {{ subscription.email }}
+		</p>
+	</article>
+	<footer style="">
+		<center><p>Copyright by Suzana</p></center>
+	</footer>
+</body>
+</html>
+

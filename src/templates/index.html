@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+{% extends 'base.html' %}
+{% block content %}
+
+	<h1>Bem-vindo ao EventeX!</h1>
+	<p>O evento mais sensacional do ano depois do Dev in Rio!</p>
+	<p>Você não pode perder esta oportunidade!</p>
+	<p><strong>
+
+	</strong></p>
+	
+	<p>Para dúvidas e mais informações entre em contato com
+		<a href="mailto:eventex@eventex.com.br">eventex@eventex.com.br</a>
+	</p>
+{% endblock content %}
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset="utf-8"/>
+		<title>EventeX</title>
+
+		<style>
+			body{
+				font:sans-serif;
+				font-size:20px;
+				background:#E9967A;
+			}
+			footer{
+				font-size:12px;
+				position:absolute;
+    				bottom:0;
+				width:100%;
+			}
+		</style>
+	</head>
+<body>
+	<br />
+	<header align="top" style="align:top">
+		<center><img src="{{ STATIC_URL }}img/EventeX.png"/></center>
+	</header>
+
+	<br />
+
+	<article>
+		<center><h2>Bem vindo ao EventeX!</h2></center>
+		<br />
+	
+		<p>
+			O evento mais sensacional do ano depois do Dev in Rio!
+		</p>
+		<p>
+			Você não pode perder esta oportunidade! 
+		</p>
+			Abertura das inscrições em:
+			{{ subscription.created_at }}.
+
+		</p>
+	</article>
+
+	<article>
+		<p>
+			<br />
+
+			Para dúvidas e informações, entre em contato pelo email {{ subscription.email }}
+		</p>
+	</article>
+	<footer style="">
+		<center><p>Copyright by Suzana</p></center>
+	</footer>
+</body>
+</html>
+>>>>>>> 7e9a5f74fac19b7df090d300bcc22f8c3578a934
+
